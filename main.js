@@ -1,27 +1,23 @@
-const LEVELS = [
-    {
-        level: 'easy',
+const LEVELS = {
+    easy: {
         cards: 6
     },
-    {
-        level: 'medium',
+    medium: {
         cards: 12
     },
-    {
-        level: 'hard',
+    hard: {
         cards: 18
     }
-
-]
+}
 
 const levelButtons = document.querySelectorAll('.level-button');
 const startButton = document.querySelectorAll('.start-button');
 let userLevel = '';
 
 
-levelButtons.forEach(button => button.addEventListener('click', (Event) => {
-    Event.preventDefault();
-    const target = Event.target;
+levelButtons.forEach(button => button.addEventListener('click', (button) => {
+    button.preventDefault();
+    const target = button.target;
     userLevel = target.value;
     target.style.backgroundColor = "#0080C1";
     target.style.color = "white";
