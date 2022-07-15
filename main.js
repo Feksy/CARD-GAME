@@ -13,14 +13,22 @@ const LEVELS = {
 const levelButtons = document.querySelectorAll('.level-button');
 const startButton = document.querySelectorAll('.start-button');
 let userLevel = '';
+const firstLevelButton = document.querySelectorAll('.first-level-button');
+const secondLevelButton = document.querySelectorAll('.second-level-button');
+const thirdLevelButton = document.querySelectorAll('.third-level-button');
 
 
 levelButtons.forEach(button => button.addEventListener('click', (button) => {
     button.preventDefault();
     const target = button.target;
     userLevel = target.value;
-    target.style.backgroundColor = "#0080C1";
-    target.style.color = "white";
+    console.log(target);
+    levelButtons.forEach(b => {
+        if (b.value !== target.value) {
+            b.classList.remove("level-selected");
+        }
+    })
+    target.classList.add("level-selected");
 
 }))
 
