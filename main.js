@@ -15,10 +15,11 @@ const startButton = document.querySelector('.start-button')
 let userLevel = ''
 
 levelButtons.forEach((button) =>
-    button.addEventListener('click', (button) => {
-        button.preventDefault()
-        const target = button.target
+    button.addEventListener('click', (event) => {
+        event.preventDefault()
+        const { target } = event
         userLevel = target.value
+        console.log(userLevel)
         levelButtons.forEach((b) => {
             if (b.value !== target.value) {
                 b.classList.remove('level-selected')
