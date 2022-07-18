@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const LEVELS = {
     easy: {
         cards: 6,
@@ -11,7 +12,7 @@ const LEVELS = {
 }
 
 const levelButtons = document.querySelectorAll('.level-button')
-const startButton = document.querySelector('.start-button')
+//const startButton = document.querySelector('.start-button')
 let userLevel = ''
 
 levelButtons.forEach((button) =>
