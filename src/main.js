@@ -12,13 +12,13 @@ const LEVELS = {
 }
 
 const levelButtons = document.querySelectorAll('.level-button')
-//const startButton = document.querySelector('.start-button')
+
 let userLevel = ''
 
 levelButtons.forEach((button) =>
-    button.addEventListener('click', (button) => {
-        button.preventDefault()
-        const target = button.target
+    button.addEventListener('click', (event) => {
+        event.preventDefault()
+        const { target } = event
         userLevel = target.value
         levelButtons.forEach((b) => {
             if (b.value !== target.value) {
