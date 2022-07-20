@@ -1,0 +1,162 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #004980;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.level-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.level-box {
+    width: 480px;
+    height: 459px;
+    background: #c2f5ff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selection-buttons-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-bottom: 67px;
+}
+
+.level-button {
+    width: 98px;
+    height: 98px;
+    background: #fff;
+    border-radius: 12px;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #0080c1;
+}
+
+.level-selected {
+    background-color: #0080c1;
+    color: white;
+}
+
+.level-button:hover {
+    background-color: #0080c1;
+    color: white;
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.start-button {
+    width: 246px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: #7ac100;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+}
+
+.start-button:hover {
+    transform: scale(1.1);
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+    text-decoration: none;
+}
+
+.level-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    width: 208px;
+    height: 96px;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #004980;
+    margin-top: 52px;
+    margin-bottom: 48px;
+}
+
+.restart-button {
+    all: unset;
+    width: 246px;
+    height: 50px;
+    background: #7ac100;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #fff;
+    outline: none;
+}
+
+.restart-button:hover {
+    transform: scale(1.1);
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.top {
+    margin-top: 22px;
+    margin-bottom: 41px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-labels {
+    display: flex;
+    justify-content: space-around;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #fff;
+}
+
+.min {
+    margin: 0;
+}
+
+.sec {
+    margin: 0;
+}
+
+.time {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #fff;
+    margin: 0;
+}
+
+.game-field {
+    display: grid;
+    gap: 15px;
+    grid-template-rows: repeat(4, 133px);
+    grid-template-columns: repeat(9, 95px);
+}
+
+.center {
+    padding-left: calc(50% - 487.5px);
+    padding-right: calc(50% - 487.5px);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
